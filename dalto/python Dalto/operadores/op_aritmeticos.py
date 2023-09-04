@@ -27,6 +27,5 @@ print(resto)
 
 #type(dato) nos devuelve que tipo de dato es
 tipo_de_dato = type(exponente)
-
-
+print(tipo_de_dato)
 
