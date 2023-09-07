@@ -1,0 +1,167 @@
+/* selector{ elemento que queremos  cambiar o modificar propiedades
+    propiedad: valor; propiedad: color, tamaño, ancho, sombra,bordes- valor:
+} */
+
+/* CSS selectores
+Universal: * afecta a todos los elementos
+de tipo: son los que seleccionamos por elemento,
+clases:asignar una clase a un elemento
+id: se utiliza el #ID.element, es un identificador tiene que ser unico, no se debe darle un mismo IS a mas de un elemento
+por atributo:
+descendiente: para modificar elementos que estan dentro de otro elemento
+pseudo-clases:
+*/
+/*
+*{
+    color:blueviolet;
+}
+h1{
+    color: green;
+}
+.titulo-h2{
+    color: rgb(21, 5, 164);
+}
+#elemen-for-modify{
+    color: rgb(213, 149, 20);
+}
+[atributo="valor"]{
+    color:deeppink
+}
+h2 p{
+    color:black
+}
+h2 b{
+    color:yellow
+}
+h3 b:hover{ /* al pasar el mouse por arriba del texto cambia de color */
+    /* color:red
+}
+*/
+
+/* niveles de jerarquia:
+de mayor a menor:
+!important
+estilos de linea (colocar style en la linea)
+identificadores
+clases - pseudoclases - atributos
+elementos
+pseudoelementos */
+
+
+/* LA CASCADA APLICA PARA ELEMENTOS IGUALES (POR EJEMPLO DOS H1..) si son elementos distintos, el cambio quedara aplicado al de mayor jerarquia
+
+h1{
+    color:deeppink !important  los demas cambios pierden jerarquia,y les gana el !IMPORTANT
+}
+
+.color-red{
+    color:blue
+}*/
+
+/* METODOLOGIA BEM
+consiste en evitar conflictos, se basa en el nombre de la clase para saber que elemento se esta seleccionando
+consiste en poner el nombre del contenedor principal __ (dos guiones bajos) y el nombre del input*/
+
+/* .contact-form__input--active{
+    color:red
+} */
+/* el --active lo podemos mover al imput que necesitemos */
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-weight: 500; /* grosor de la letra */
+    font-size: 50px;
+}
+
+.contact-form {
+font-size: 30px;
+}
+
+.contact-form__p-h2 {
+    font-size: 1em; /* ahora 1em va a valer 30px */
+
+    color:blueviolet
+}*
+
+
+/* la medida del EM es 16px por defecto, pero la determina la caja contenedora. SE HEREDA
+FONT GOOGLE para buscar tipografias*/
+
+/* un contenedor en linea se puede transformar en un contenedor en bloque y visceversa con el DISPLAY, que es una propiedad que permite cambiar el comportamiento de las cajas */
+
+/* h2{
+display: inline;  block es por defecto, ahora todos los h2 se van a comportar como en linea 
+} */
+
+/* a los contenedores de bloque se les puede dar algunas propiedades y a los de linea otras:
+los de linea no se ven afectados por el "height" ni por el "widht" en cambio el contenedor en bloque si */
+
+h2{
+    background-color: dodgerblue;
+    display: inline-block;
+    padding:100px;
+    /* padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px; */
+    /* SI SOLO PONEMOS PADDING: 20px; se va a aplicar el 20 en todas las direcciones
+
+    podemos poner padding: 20px 30px; y asi se va a modificar arriba-abajo derecha-izquierda
+
+    podemos poner padding: 10px 20px 30px 40px y va a modificar en orden: arriba, derecha, abajo, izquierda*/
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    border-radius: 50%;
+    border: 8px dashed green;
+    box-shadow: 23px 13px 30px 0px black;
+    text-shadow: 6px 6px 3px #fff;
+    transform: rotate(45deg);
+}
+/* PADDING: distancia que hay entre el texto y la caja 
+MARGIN: distancia entre dos cajas. los parametros se ponen igual que el padding
+BOERDER-RADIUS: para redondear los bordes, cualquier unidad de medida
+BORDER : tamaño - estilo - color
+el estilo puede ser: solid, dashed, inset, outset, double, groove, ridge
+BOx-SHADOW sombra: parametros: eje x - eje y- tamaño del desenfoque- tamaño del borde - color
+TRANSFORM para rotar la caja */
+
+/* OUTLINE: SHORTHAND propiedad acortada, es como BORDER pero sin afectar a las demas cajas, es como un resaltador , no afecta el tamaño de las cajas, en cabio el border mientras mas ancho menos contenido de caja*/
+
+/* .caja1 {
+    width: 200px; 
+    height: 200px; 
+    background-color: red;
+    margin: auto;
+    border: 10px solid green
+}
+.caja2 {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: auto;    
+}  */
+
+/* esto se puede acortar : 
+.caja1, .caja2 {
+    width: 200px;
+    height: 200px;
+} */
+
+div{
+    width: 120px;
+    height: 120px;
+    display: block;
+    background: palevioletred;
+}
+.caja1 {
+    background-color: orange;
+}
+.caja2 {
+    background-color: rgb(230, 7, 22);
+}
+.caja3 {
+    background-color: rgb(26, 20, 208);
+}
+.caja4 {
+    background-color: rgb(28, 183, 4);
+}
