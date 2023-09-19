@@ -1,3 +1,11 @@
+
+/* https://www.youtube.com/watch?v=OWKXEJN67FE CURSO CSS DESDE CERO (COMPLETO) DALTO */
+
+
+
+
+
+
 /* selector{ elemento que queremos  cambiar o modificar propiedades
     propiedad: valor; propiedad: color, tamaño, ancho, sombra,bordes- valor:
 } */
@@ -40,12 +48,12 @@ h3 b:hover{ /* al pasar el mouse por arriba del texto cambia de color */
 
 /* niveles de jerarquia:
 de mayor a menor:
-!important
-estilos de linea (colocar style en la linea)
+/* !important */
+/* estilos de linea (colocar style en la linea)
 identificadores
 clases - pseudoclases - atributos
 elementos
-pseudoelementos */
+pseudoelementos  */
 
 
 /* LA CASCADA APLICA PARA ELEMENTOS IGUALES (POR EJEMPLO DOS H1..) si son elementos distintos, el cambio quedara aplicado al de mayor jerarquia
@@ -66,10 +74,10 @@ consiste en poner el nombre del contenedor principal __ (dos guiones bajos) y el
     color:red
 } */
 /* el --active lo podemos mover al imput que necesitemos */
-*{
+/* *{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-    font-weight: 500; /* grosor de la letra */
-    font-size: 50px;
+    font-weight: 500;  grosor de la letra
+    font-size: 100px;
 }
 
 .contact-form {
@@ -77,10 +85,10 @@ font-size: 30px;
 }
 
 .contact-form__p-h2 {
-    font-size: 1em; /* ahora 1em va a valer 30px */
+    font-size: 1em; ahora 1em va a valer 30px
 
     color:blueviolet
-}*
+}* */
 
 
 /* la medida del EM es 16px por defecto, pero la determina la caja contenedora. SE HEREDA
@@ -89,16 +97,16 @@ FONT GOOGLE para buscar tipografias*/
 /* un contenedor en linea se puede transformar en un contenedor en bloque y visceversa con el DISPLAY, que es una propiedad que permite cambiar el comportamiento de las cajas */
 
 /* h2{
-display: inline;  block es por defecto, ahora todos los h2 se van a comportar como en linea 
+display: inline;  block es por defecto, ahora todos los h2 se van a comportar como en linea
 } */
 
 /* a los contenedores de bloque se les puede dar algunas propiedades y a los de linea otras:
 los de linea no se ven afectados por el "height" ni por el "widht" en cambio el contenedor en bloque si */
 
-h2{
-    background-color: dodgerblue;
+/*h2{
+     background-color: dodgerblue;
     display: inline-block;
-    padding:100px;
+    padding:100px; */
     /* padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 30px;
@@ -108,16 +116,16 @@ h2{
     podemos poner padding: 20px 30px; y asi se va a modificar arriba-abajo derecha-izquierda
 
     podemos poner padding: 10px 20px 30px 40px y va a modificar en orden: arriba, derecha, abajo, izquierda*/
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     text-align: center;
     margin: 10px;
     border-radius: 50%;
     border: 8px dashed green;
     box-shadow: 23px 13px 30px 0px black;
     text-shadow: 6px 6px 3px #fff;
-    transform: rotate(45deg);
-}
-/* PADDING: distancia que hay entre el texto y la caja 
+    transform: rotate(45deg); 
+}*/
+/* PADDING: distancia que hay entre el texto y la caja
 MARGIN: distancia entre dos cajas. los parametros se ponen igual que el padding
 BOERDER-RADIUS: para redondear los bordes, cualquier unidad de medida
 BORDER : tamaño - estilo - color
@@ -128,8 +136,8 @@ TRANSFORM para rotar la caja */
 /* OUTLINE: SHORTHAND propiedad acortada, es como BORDER pero sin afectar a las demas cajas, es como un resaltador , no afecta el tamaño de las cajas, en cabio el border mientras mas ancho menos contenido de caja*/
 
 /* .caja1 {
-    width: 200px; 
-    height: 200px; 
+    width: 200px;
+    height: 200px;
     background-color: red;
     margin: auto;
     border: 10px solid green
@@ -138,30 +146,362 @@ TRANSFORM para rotar la caja */
     width: 200px;
     height: 200px;
     background-color: blueviolet;
-    margin: auto;    
+    margin: auto;
 }  */
 
-/* esto se puede acortar : 
+/* esto se puede acortar :
 .caja1, .caja2 {
     width: 200px;
     height: 200px;
 } */
-
+/*
 div{
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     display: block;
-    background: palevioletred;
+
 }
 .caja1 {
     background-color: orange;
+    font-size: 50px;
 }
 .caja2 {
     background-color: rgb(230, 7, 22);
+    font-size: 50px;
+    position: relative;
+    top: 60px;
+    left: 20px;
+    z-index: 30;
 }
 .caja3 {
     background-color: rgb(26, 20, 208);
+    font-size: 50px;
+    z-index: 2;
 }
 .caja4 {
     background-color: rgb(28, 183, 4);
+    font-size: 50px;
+} */
+
+/* POSITION RELATIVE conserva su lugar
+
+EL MAYOR VALOR DE ZINDEX VA A ESTAR POR DELANTE
+el Zindex solo funciona cando la caja esta posicionada */
+
+/* .contenedor{
+    width: 300px;
+    height: 300px;
+    background: blue;
+    margin: 40px;
+    position: relative;
 }
+.hijo{
+    background-color: orange;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: -20px;
+    left: -20px;
+} */
+ /* la unica forma de poner al hijo por debajo del padre es ponerle al hijo un zindex de -1 y que al padre no se le defina el zindex (directamente no lo pones) */
+
+ /* POSITION ABSOLUTE
+ el espacio deja de estar reservado, y la caja puede moverse y ocupar otro lugar
+el punto de referencia va a ser toda la pantalla (viewport) o el contenedor si esta posicionado (relative)
+el tamaño del bloque se va a ajustar al tamaño del contenido
+ */
+
+ /* div{
+    width: 200px;
+    height: 200px;
+    display: block;
+
+}
+.caja1 {
+    background-color: orange;
+    font-size: 50px;
+}
+.caja2 {
+    background-color: rgb(230, 7, 22);
+    font-size: 50px;
+
+}
+.caja3 {
+    background-color: rgb(26, 20, 208);
+    font-size: 50px;
+
+} */
+/* POSITION FIXED, es igual que absolut, pero la diferencia es que queda fijo en la pantalla, (como las punlicidades)
+PUEDE SERVIR PARA UN MENU*/
+
+/* body{
+    padding-top: 100px;  BAJAMOS TODO PARA QUE LA CAJA FIXED NO TAPE EL TEXTO
+}
+.caja-fixed{
+    background-color: crimson;
+    position: fixed;
+    margin: -100px
+} */
+/* POSITION STICKY: es como una mezcla del relative y del fixed */
+
+/* display: maneja el comportamiento en si de las cajas. no la interaccion entre ellas */
+
+/* div{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    border: 10px solid red;
+    background: yellow;
+
+} */
+
+/* DISPLAY 
+- BLOCK, las cajas se ponen una abajo de la otra
+- inline, se ponen una al lado de la otra pero no se pueden modificar (solo se ve el margen, como si estuviera de costado)
+-inline block, se ponen una al lado la otra  
+
+LA PROP POR DEFECTO DE LOS DIVS ES EN BLOCK */
+
+/* b{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border: 10px solid red;
+    background: yellow;    
+} */
+/* a los display INLINE no se les puede poner heigh ni width
+pero si pongo el display en block , si se puede poner heigh y width  */
+
+/* OVERFLOW: para que el texto no se rebalse de su caja contenedora 
+-auto, detecta que el contenido sobrepasa, pero lo mete igual dentro de la caja y le agrega una barra para poder desplazarte en el texto (scrollear dentro de la caja)
+-scroll, obligadamente pone la barra de desplazamiento, aunque no haga falta
+-auto, detecta si es necesario o no poner la barra de desplazamiento
+*/
+/* div {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    border: 10px solid red;
+    background: yellow;
+    overflow: auto;
+
+} */
+/* FLOAT: sirve en ocaciones de poner texto e imagen dentro de un contenedor */
+/* .contenedor div{
+    float: right;
+    width: 50%;
+}
+.primario{
+    background: red;
+}
+.secundario{
+    background: yellow;
+} */
+
+/* PSEUDOELEMENTOS */
+/* no forma parte del dom pero si podemos ver efecto visuales */
+/* ::first-line funciona solo en los elementos en bloque, se refiere a la primera linea, y por mas que cambie de tamaño , la primera linea va a ser solo afectada
+los PSEUDOELEMENTOS se aplican a los elementos
+INLINE NO FUNCIONA
+*/
+
+/* .texto{
+    padding: 20px;
+    } */
+
+.texto::first-line { /* los pseudoelementos se aplican a los elementos. de esta manera siempre la primera linea, sin importar el tamaño, se va a ver afectada */
+    color: blue;
+    font-size: 2em;
+    
+/* .texto::first-letter {} lo mismo pero solo para la primera letra */
+
+/* los pseudoelementos que formen parte de los CONTENT no forman parte del DOM */
+    
+}
+
+/* PLACEHOLDER, es lo que va adentro de la caja de texto (input) */
+/* form{
+    margin: 100px auto;
+    display: block;
+    background-color: chartreuse;
+    padding: 50px;
+    width: 50%;
+    text-align: center;
+} */
+
+/* input{
+    padding: 6px;
+    width: 100%;
+} */
+
+/* para darle estilo a las letras que van dentro de la caja de texto (input) */
+/* input::placeholder {
+    color: blueviolet;
+    font-size: 1.4em; } */
+
+
+/* SELECTION : cuando seleccionamos una palabra, que se pone fondito azul y letras blancas 
+este psauelemento se puede aplicar a textos , parrafos, titulos,etc. y se comporta como un elemento EN LINEA*/
+/* input::selection {
+    color: rgb(226, 70, 43);
+    font-size: 1.4em;
+    background-color: gold;
+} */
+
+
+/* BEFORE Y AFTER. before .... a .... after , la a la escribimos dentro de una etiqueta del archivo html 
+before y after son pseudoelementos que lo hacemos dentro del archivom css*/
+/* b{
+    padding: 6px;
+    width: 100%;
+}
+b::before {
+    content: "me suscribi";
+    color: #fff
+}
+b::after {
+    content: "yutu premium";
+    color: #de3c3c
+} */
+
+
+/* PSEUDOCLASES */
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 100px;
+}
+/* .caja1{
+    height: 200px;
+    width: 200px;
+    background: blueviolet; */
+    /* transition: background 1s, height 1s, width 1s;  TIEMPO QUE PASA DE UN ESTADO AL OTRO*/
+    /* transition: all 1s;
+    border: 3px solid red;
+} */
+
+/* cuando pasemos el mouse por arriba van a pasar cosas */
+/* .caja1:hover{
+    background: yellow;
+    height: 300px;
+    width: 300px;
+    border: 3px solid black; 
+} */
+
+
+/* .caja1{
+    padding: 20px;
+    background-color: blue;
+    transition: background-color 0.5s;
+    color: #fff
+}
+
+.caja1:hover{
+    padding: 20px;
+    background-color: cornflowerblue;
+    color: #000
+} */
+
+/* PSEUDOELEMENTO LINK: cambia un link que todavia no visitamos */
+/* .caja1{
+    margin: 30px;
+    display: block;
+} */
+
+/* si el link no esta visitado pasa lo siguiente: */
+/* a:link{
+    color: red;
+    } */
+    
+/* cambiarle el estilo al link que ya fue visitado,con la PSEUDOCLASE VISITED */
+/* 
+a:visited{
+    color: green;
+} */
+
+/* PSEUDOCLASE :active AL DEJAR APRETADO UN  BOTON, CAMBIAS LOS ESTILOS*/
+/* .caja{
+    width: 300px;
+    height: 300px;
+    background: red;
+    margin: 25px;
+    transition: all 2s;
+} */
+/* esta caracteristica solo va a funcionar mientras tenemos presionada la caja */
+/* .caja:active{
+    background-color: blueviolet;
+    width: 600px;
+} */
+
+/* FOCUS: se aplica a los input  */
+/* .caja{
+    margin: 25px;
+    background: lightcoral;
+    transition: all 2s;
+}
+.caja:focus{
+    background-color: blueviolet;
+    padding: 20px;
+} */
+
+/* LANG: va con parentesis porq es una funcion que se le pueden agregar paramentros */
+
+
+/* .caja{
+    margin: 25px;
+} */
+/* lo que este dentro del parentesis se va a ver afectado por los cambios, en este caso lo que este en ingles se va a ver violeta (le tenemos que dar propiedad en el archivo html)*/
+/* NO ME FUNCIONO */
+
+/* .caja b:lang(en){
+    background: red;
+    padding: 20px;
+} */
+
+/* -----OBJECT-FIT----- Mas que nada para imagenes*/
+
+/* contain: hace que las resoluciones se ajusten al contenido, aunque sobre recuadro */
+/* cover: hace que la imagen se ajuste al contenedor , aun asi recortando lo que sobre de la imagen */
+/* none: usa las propiedades por defecto */
+/* scale-down: no sirve para imagenes super grandes, se queda con la mejor propiedad */
+/* -----OBJECT- POSITION----- Mas que nada para imagenes*/
+/* object-position: rigt (, left, bottom, top) tira la imagen mas hacia donde pongamos */
+
+
+/* .caja{
+    margin: 25px;
+    width: 300px;
+    height: 400px;
+}
+.caja img{
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: contain;
+    object-position: rigt;
+} */
+
+/* CURSOR: prop que nos permite cambiar el cursor al estar encima de un elemento 
+
+https://www.w3schools.com/cssref/tryit.php?filename=trycss_cursor
+
+.caja{
+    margin: 45px;
+    width: 200px;
+    height: 300px;
+    border: 5px solid red;
+    background-color: green;
+    cursor: pointer;
+}
+.caja:active{
+    cursor: row-resize;
+}*/
+
+/* --------COLORIZACION------- */
+/* colores por nombre, "red" "yellow" el navegador elije por defecto propio el color que va a poner "rojo mas claro, mas oscuro, mas o menos"
+hexadecimal y rgb es el color verdaderamente como lo elegimos */
+/* COLORES PRIMARIOS: VERDE, ROJO Y AZUL */
+/* RGB = RED GREEN BLUE */
+/* 0 a 255 */
