@@ -1,0 +1,39 @@
+button{
+    background-color:antiquewhite;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font color: black;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    border box: 8px black;
+    box-shadow: 20px black;
+    text-shadow: 20px #fff;
+}
+
+H2{
+    background-color: dodgerblue;
+    text-align: center;
+    /* padding:100px; */ 
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+}
+
+
+.IMAGEN {
+    position: relative;
+    display: inline-flex;
+    width: 284px;
+    height: 177px;
+}
+
+.titulo-imagen {    
+    position: absolute;
+    left: 10%;    
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+}
